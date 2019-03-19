@@ -7,7 +7,6 @@ def key_for_min_value(hash)
   new_hash = {}
   hash.collect do |k, v|
     v == compared_value
-      binding.pry
   end
 end
 
