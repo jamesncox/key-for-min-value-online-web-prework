@@ -12,6 +12,13 @@ require "pry"
 # end
 
 def key_for_min_value(hash)
-  key = nil
-  value = nil 
-  
+  lowest_key = nil
+  lowest_value = nil 
+  hash.collect do |k, v|
+    if lowest_value == nil || v < lowest_value
+      lowest_value = v
+      lowest_key = k
+    end
+    lowest_key
+  end
+end
